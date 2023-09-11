@@ -19,7 +19,7 @@ nav {
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .logo-area {
@@ -129,12 +129,15 @@ main {
     margin-left: 30px;
 }
 
+.sidebar-item:nth-child(1){
+    margin-top: 5px;
+}
+
 /* Main Form */
 
 .form-container {
     max-width: 598px;
     min-width: 500px;
-    height: 46px;
     margin: 40px auto;
     background: #fff;
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 2px 6px 2px rgba(60,64,67,0.149);
@@ -149,6 +152,28 @@ main {
     align-items: center;
 }
 
+.note-text {
+    border: none;
+    font-size: 1rem;
+    height: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    width: 100%;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.note-title {
+    border: none;
+    font-size: 1rem;
+    height: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    width: 100%;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
 .form-container form input {
     background: none;
 }
@@ -157,14 +182,106 @@ main {
     outline: none;
 }
 
-.note-text {
-    border: none;
-    font-size: 1rem;
-    height: 100%;
-    padding: 10px;
-}
 
 .form-actions {
     display: flex;
+}
+
+.active-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.active-form form .form-actions .icons {
+    display: flex;
+}
+
+.active-form form .form-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.small-icon {
+    color: black;
+    font-size: 0.7rem;
+}
+
+/* All Notes */
+
+.notes {
+    display: flex;
+    justify-content: center;
+}
+
+.note {
+    background: white;
+    width: 245px;
+    margin: 10px;
+    border: 1px solid #e0e1e0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.note .title {
+    /* display: block; */
+    width: 100%;
+    margin: 10px 0 0 15px;
+}
+
+.note .text {
+    /* display: block; */
+    width: 100%;
+    margin: 15px 0 0 15px;
+}
+
+.note .note-footer {
+    display: flex;
+    margin-top: 10px;
+    padding: 0;
+    justify-content: center;
+}
+
+.note-footer .material-symbols-outlined {
+    font-size: 18px;
+    color: #5f6368;
+}
+
+.note .check-circle {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.model-content form {
+    width: 589px;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.open-modal {
+    visibility: visible;
 }
 
